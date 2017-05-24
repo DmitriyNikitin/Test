@@ -1,32 +1,25 @@
 package com.example.test;
 
-import android.content.Intent;
-import android.provider.ContactsContract;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import android.webkit.WebView;
 
-public class Screen2 extends AppCompatActivity implements View.OnClickListener {
 
-    Button OnMainScreen;
+public class Screen2 extends AppCompatActivity{
+
+WebView page;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen2);
 
-        OnMainScreen = (Button) findViewById(R.id.OnMainScreen);
-        OnMainScreen.setOnClickListener(this);
+        page = (WebView) new WebView(this);
+        setContentView(page);
+
+        page.loadUrl("https://oauth.vk.com/authorize?client_id=6043385&display=mobile&redirect_uri=&scope=friends&response_type=code&v=5.64");
     }
 
-    @Override
-    public void onClick(View v) {
-        switch(v.getId()) {
-            case R.id.OnMainScreen:
-                Intent OnMainScreen = new Intent(this, MainActivity.class);
-                startActivity(OnMainScreen);
-                break;
-        }
-    }
+
 }

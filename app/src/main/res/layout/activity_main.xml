@@ -28,18 +28,12 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <Button
-            android:id="@+id/on1screen"
+            android:id="@+id/on2screen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/btnmainscreen"
             tools:layout_editor_absoluteX="15dp"
             tools:layout_editor_absoluteY="22dp" />
-
-        <Button
-            android:id="@+id/on2screen"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Перейти на экран 2" />
 
     </LinearLayout>
 

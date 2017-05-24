@@ -13,18 +13,8 @@
         tools:layout_editor_absoluteY="8dp"
         tools:layout_editor_absoluteX="8dp">
 
-        <TextView
-            android:id="@+id/textView2"
+        <WebView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:text="Экран 2" />
-
-        <Button
-            android:id="@+id/OnMainScreen"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="На главный Экран" />
-
+            android:layout_height="match_parent" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
