@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Test</string>
+    <string name="Firstscreen">Первый экран</string>
+    <string name="btnFirstscreen">Перейти на главный экран</string>
+    <string name="mainscreen">Главный экран</string>
+    <string name="btnmainscreen">Перейти на экран 1</string>
 </resources>
