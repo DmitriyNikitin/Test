@@ -19,7 +19,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".Firstscreen" />
-        <activity android:name=".Screen2"></activity>
+        <activity android:name=".Screen2">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"></action>
+                <data android:scheme="http"></data>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
