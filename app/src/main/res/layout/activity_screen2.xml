@@ -11,11 +11,14 @@
         android:layout_height="495dp"
         android:orientation="vertical"
         tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp">
+        tools:layout_editor_absoluteX="8dp"
+        android:weightSum="1">
 
         <WebView
             android:id="@+id/web"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="434dp"
+            android:layout_weight="1.42" />
+
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
