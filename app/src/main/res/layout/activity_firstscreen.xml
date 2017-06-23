@@ -4,25 +4,4 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:layout_marginTop="5dp"
-        android:text="@string/Firstscreen" />
-
-    <Button
-        android:id="@+id/OnMainScreen"
-        android:layout_width="354dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/btnFirstscreen" />
-
-    <Button
-        android:id="@+id/on2screen"
-        android:layout_gravity="center"
-        android:layout_width="368dp"
-        android:layout_height="wrap_content"
-        android:text="На второй экран" />
 </LinearLayout>
