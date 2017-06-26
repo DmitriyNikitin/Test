@@ -79,8 +79,8 @@ import static com.example.test.R.id.web;
                     access = new StringTokenizer(tok, "&");
                     access_token = access.nextToken();
 
-                    view.loadUrl("https://api.vk.com/method/friends.get?fields=photo_100,country&order=name&" + access_token);
                     JSON = "https://api.vk.com/method/friends.get?fields=photo_100,country&order=name&" + access_token;
+                   // view.loadUrl(JSON);
                     view.setVisibility(view.GONE);
                     contactList = new ArrayList<>();
 
@@ -132,6 +132,14 @@ import static com.example.test.R.id.web;
                             String id = c.getString("uid");
                             String first_name = c.getString("first_name");
                             String last_name = c.getString("last_name");
+                            String photo_100 = c.getString("photo_100");
+                            String online = c.getString("online");
+
+                            if(online != "0"){
+                                online = "online";
+                            }else{
+                                online = " ";
+                            }
 
 
                             // tmp hash map for single contact
@@ -141,6 +149,8 @@ import static com.example.test.R.id.web;
                             contact.put("uid", id);
                             contact.put("first_name", first_name);
                             contact.put("last_name", last_name);
+                            contact.put("photo_100", photo_100);
+                            contact.put("online", online);
 
 
                             // adding contact to contact list
@@ -187,9 +197,9 @@ import static com.example.test.R.id.web;
                  * */
                 ListAdapter adapter = new SimpleAdapter(
                         Screen2.this, contactList,
-                        R.layout.list_item, new String[]{"first_name",
-                        "last_name"}, new int[]{
-                        R.id.first_name, R.id.last_name});
+                        R.layout.list_item, new String[]{"photo_100", "first_name",
+                        "last_name", "online"}, new int[]{
+                         R.id.img, R.id.first_name, R.id.last_name, R.id.online});
 
                 lv.setAdapter(adapter);
             }
